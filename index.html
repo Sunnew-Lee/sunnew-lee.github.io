@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,25 +19,39 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
+
+    <div id="language-switcher" class="shadow-large">
+        <button id="language-switcher-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span id="language-switcher-current">Language</span>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+        <ul id="language-switcher-dropdown">
+            <li><a href="#" data-lang-option="en">English</a></li>
+            <li><a href="#" data-lang-option="ko">한국어</a></li>
+        </ul>
+    </div>
+    <!-- End #language-switcher -->
+
     <header class="sticky">
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="#about">About</a>
+                <a href="#about"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
             </li>
             <li>
-                <a href="#skills">Skills</a>
+                <a href="#skills"><span class="lang-en">Skills</span><span class="lang-ko">기술</span></a>
             </li>
             <li>
-                <a href="#education">Education</a>
+                <a href="#education"><span class="lang-en">Education</span><span class="lang-ko">학력</span></a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects"><span class="lang-en">Projects</span><span class="lang-ko">프로젝트</span></a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience"><span class="lang-en">Experience</span><span class="lang-ko">경력</span></a>
             </li>
             <!-- <li>
                 <a href="#contact">Contact</a>
@@ -48,9 +62,13 @@
 
     <div id="lead">
         <div id="lead-content">
-            <h1>이선우</h1><h1>Sunwoo Lee</h1>
-            <h2>Software Engineer</h2>
-            <a href="assets/Sunwoo_Lee_Resume.pdf" class="btn-rounded-white" target="_blank">Resume 다운받기 - Download Resume</a>
+            <h1 class="lang-ko">이선우</h1>
+            <h1 class="lang-en">Sunwoo Lee</h1>
+            <h2><span class="lang-en">Game Developer</span><span class="lang-ko">게임 개발자</span></h2>
+            <!--
+            <a href="assets/Sunwoo_Lee_Resume.pdf" class="btn-rounded-white" target="_blank"><span
+                    class="lang-en">Download Resume</span><span class="lang-ko">이력서 다운받기</span></a>
+            -->
         </div>
         <!-- End #lead-content -->
 
@@ -69,36 +87,76 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">자기소개 - About Me</h2>
+                    <h2 class="heading"><span class="lang-en">About Me</span><span class="lang-ko">자기소개</span></h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-                        안녕하십니까, 저는 미국 워싱턴 주에 있는 디지펜 공과대학 본교와 대구 계명대학교 성서캠퍼스에서 각각 Computer Science와 디지펜게임공학전공 학사를 졸업했습니다.
-                    </p>
-                    <p>
-                        OS, 자료구조, 알고리즘 등 CS 과목들과 3D 그래픽스, 공학수학, 게임개발 등의 수업들에서 높은 성취율로 숨마쿰라우데 졸업을 할 수 있었습니다.
-                        또한 다년간의 외국생활로 영어는 일상회화 이상으로 합니다(OPIc IH - 2025.05.11 취득).
-                    </p>
-                    <p>
-                        프로그래밍 언어로는 주로 C++과 OpenGL을 사용했으며, 개발 IDE는 Visual Studio 2019와 VS Code를 주로 사용했습니다.
-                        협업 시, 소통과 피드백을 가장 중요하게 생각합니다.
-                    </p>                     
-                    <p>
-                        ㅤ
-                    </p>
-                    <p>
-                        Hi, my name is Sunwoo Lee, a new grad from DigiPen Institute of Tech at Redmond Washington with a Bachelor of Computer Science degree.
-                    </p>
-                    <p>
-                        I am seeking for job opportunities where I can use my programming skills I learned from my coursework and several projects.
-                    </p>
-                    <p>
-                        I have roughly three years of c++ experience and some knowledge on 3D graphics, mathematics, and game development.
-                        I also have little experience in app development while working as a Software Engineer Intern at A Round Entertainment for 4 months.
-                    </p>
-                    <p>
-                        I value people more than anything, so I try to have good relationships with everyone and gain trust to the people near me.
-                    </p>
+
+                    <div class="lang-en">
+                        <div class="intro-header mb-5">
+                            <h2 class="fw-bold display-6">
+                                Hi, I'm <span class="text-primary">Sunwoo Lee</span>.<br>
+                                A developer who brings creative ideas to life through programming.
+                            </h2>
+                        </div>
+                        <p>
+                            My journey began simply from the pure joy of playing games with friends. Over time, I fell
+                            in love with <strong>indie games</strong> that showcase <strong>unique narratives, art styles, and
+                                mechanics</strong>. I was especially drawn to the supportive indie culture and its
+                            communities. Feeling a deep sense of belonging in this collaborative space is
+                            what ultimately drove me to become a game developer.
+                        </p>
+                        <p>
+                            I strive to be a developer who genuinely <strong>loves the game we are building</strong>,
+                            always keeping the <strong>player's experience</strong> at the heart of everything I do. I
+                            highly value a <strong>flat, collaborative culture</strong> where members can freely
+                            exchange diverse ideas <strong>regardless of their specific roles</strong>. By embracing
+                            seamless <strong>communication</strong> and constructive <strong>feedback</strong>, my
+                            ultimate goal is to work united as one team to craft a highly polished and memorable
+                            masterpiece.
+                        </p>
+                        <p>
+                            To build the technical foundation needed to bring these visions to reality, I earned dual
+                            Bachelor's degrees: a B.S. in <strong>Computer Science</strong> from <strong>DigiPen
+                                Institute of Technology</strong> (Washington, USA) and a B.S. in <strong>DigiPen Game
+                                Engineering</strong> from <strong>Keimyung University</strong> (Daegu, South Korea).
+                        </p>
+                        <p>
+                            My core technical expertise lies in <strong>C++</strong> and OpenGL, utilizing Visual Studio
+                            2022 and VS Code. Leveraging <strong>Unreal Engine 5</strong>, I have developed titles such
+                            as <strong>BEAR</strong>, a single-player 3D puzzle platformer, <strong>Busted!</strong>, a 3D multiplayer cops-and-robbers game, and more.
+                        </p>
+                    </div>
+
+                    <div class="lang-ko">
+                        <div class="intro-header mb-5">
+                            <h2 class="fw-bold display-6">
+                                머리속의 창의적인 아이디어를<br>
+                                프로그래밍으로 구현하는 개발자, <span class="text-primary">이선우</span>입니다.
+                            </h2>
+                        </div>
+                        <p>
+                            미국 워싱턴 주에 있는 <strong>디지펜 공과대학</strong> 본교와 대구 <strong>계명대학교</strong> 성서캠퍼스에서 각각
+                            <strong>Computer
+                                Science</strong>와 <strong>디지펜게임공학전공</strong> 학사를 졸업했으며(복수학위),
+                            컴퓨터 구조학, 자료구조, 알고리즘 등 <strong>CS 과목</strong>들과 3D 그래픽스, 공학수학, 게임개발 등의 수업들에서 <strong>높은
+                                성취율</strong>로 숨마쿰라우데
+                            <strong>졸업</strong>을 할 수 있었습니다.
+                        </p>
+                        <p>
+                            <strong>게임 개발 프로그래밍 언어</strong>로는 주로 <strong>C++</strong>과 OpenGL을 사용했으며, 개발 IDE는 Visual
+                            Studio 2022와 VS Code를
+                            주로 사용했습니다.
+                            상용 엔진인 <strong>Unreal Engine 5</strong>을 사용하여 싱글 3D 퍼즐 플랫포머 게임인 <strong>BEAR</strong>과
+                            멀티플레이어 3D 경찰과 도둑 컨셉의 게임인
+                            <strong>Busted!</strong>를
+                            개발하였습니다.
+                        </p>
+                        <p>
+                            협업 시, <strong>수평적인</strong> 관계로 서로의 업무를 <strong>배려</strong>하면서 유기적인 <strong>소통</strong>과
+                            <strong>피드백</strong>을
+                            통해 생산성과 개인역량 발전이 이루어질 수 있는 분위기을 가장 중요하게 생각합니다.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,33 +164,28 @@
     <!-- End #about -->
 
     <div id="skills" class="background-alt">
-        <h2 class="heading">Skills</h2>
+        <h2 class="heading"><span class="lang-en">Skills</span><span class="lang-ko">스킬셋</span></h2>
         <ul>
             <li>C++</li>
+            <li>Unreal Engine 5</li>
+            <li>Git</li>
             <li>OpenGL</li>
             <li>GLSL</li>
-            <li>C</li>
-            <li>Visual Studio</li>
-            <li>VS Code</li>
-            <li>Unreal Engine 5</li>
-            <li>Github</li>
-            <li>Dear ImGui</li>
-            <li>React Native</li>
-            <li>Android Studio</li>
         </ul>
     </div>
     <!-- End #skills -->
 
     <div id="education">
-        <h2 class="heading">학위 - Education</h2>
-        
+        <h2 class="heading"><span class="lang-en">Education</span><span class="lang-ko">학위</span></h2>
+
         <div class="education-block">
-            <h3>디지펜 공학대학 - DigiPen Institute of Technology</h3>
-            <span class="education-date">Aug 2022 - Apr 2024</span>
+            <h3><span class="lang-en">DigiPen Institute of Technology</span><span class="lang-ko">디지펜 공과대학</span></h3>
+            <span class="education-date"><span class="lang-en">Aug 2022 - Apr 2024</span><span class="lang-ko">2022 8월 -
+                    2024 4월</span></span>
             <h4>Bachelor of Computer Science in Real-Time Interactive Simulation (3.85/4.0)</h4>
             <ul>
                 <li>
-                    미국, 워싱턴 주, 레드먼드 - Redmond, Washingtion, USA
+                    <span class="lang-en">Redmond, Washington, USA</span><span class="lang-ko">미국, 워싱턴 주, 레드먼드</span>
                 </li>
             </ul>
         </div>
@@ -146,12 +199,14 @@
                     대한민국, 대구광역시
                 </li>
             </ul> -->
-            <h3>계명대학교 - Keimyung University</h3>
-            <span class="education-date">Mar 2018 - Aug 2024</span>
-            <h4>디지펜게임공학전공 - Bachelor of DigiPen Game Engineering (4.22/4.5)</h4>
+            <h3><span class="lang-en">Keimyung University</span><span class="lang-ko">계명대학교</span></h3>
+            <span class="education-date"><span class="lang-en">Mar 2018 - Aug 2024</span><span class="lang-ko">2018 3월 -
+                    2024 8월</span></span>
+            <h4><span class="lang-en">Bachelor of DigiPen Game Engineering (4.22/4.5)</span><span
+                    class="lang-ko">디지펜게임공학전공 (4.22/4.5)</span></h4>
             <ul>
                 <li>
-                    대한민국, 대구 - Daegu, Republic of Korea
+                    <span class="lang-en">Daegu, Republic of Korea</span><span class="lang-ko">대한민국, 대구</span>
                 </li>
             </ul>
             <!-- <p>
@@ -163,9 +218,53 @@
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">프로젝트 - Projects</h2>
+        <h2 class="heading"><span class="lang-en">Projects</span><span class="lang-ko">프로젝트</span></h2>
         <div class="container">
             <div class="row">
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="assets/images/Busted!.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><a href="https://github.com/WantedP5/Project_AnimalCrime" target="_blank">Busted!</a></h3>
+                        <p>
+                            A Steam-powered multiplayer party game of cops and robbers — police hunt and interrogate
+                            suspects while the mafia bluff, sabotage, and slip away to avoid capture.
+                        </p>
+                        <p class="project-meta">
+                            4-person team project · Unreal Engine 5, C++ · Wanted PotenUp bootcamp project
+                        </p>
+                        <a href="https://youtu.be/hkClIFcl6Bo" target="_blank"><span class="lang-en">Gameplay
+                                Video</span><span class="lang-ko">게임플레이 영상</span></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="assets/images/p4rpg.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><a href="https://github.com/Sunnew-Lee/Wanted_Project4" target="_blank">P4RPG</a>
+                        </h3>
+                        <p>
+                            A Monster Hunter-style action RPG tech demo built on Monster Hunter assets, focused on
+                            implementing combat, AI, and inventory systems rather than full game content.
+                        </p>
+                        <p class="project-meta">
+                            4-person team project · Unreal Engine 5, C++, Gameplay Ability System (GAS) · Wanted
+                            PotenUp bootcamp project
+                        </p>
+                        <a href="https://youtu.be/QYTR_kaGeNI" target="_blank"><span class="lang-en">Gameplay
+                                Video</span><span class="lang-ko">게임플레이 영상</span></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
 
                 <div class="project shadow-large">
                     <div class="project-image">
@@ -175,12 +274,18 @@
                     <div class="project-info">
                         <h3><a href="https://github.com/Sunnew-Lee/BEAR" target="_blank">BEAR</a></h3>
                         <p>
-                            Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
-                            Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
+                            A 3D puzzle-platformer in which a small teddy bear, mysteriously brought to life,
+                            navigates a dark, abandoned factory — solving tense, elegant platforming puzzles to find
+                            a way out before it's too late.
                         </p>
-                        <a href="https://youtu.be/4OJfjtOhcM8" target="_blank">Gameplay Video</a>
+                        <p class="project-meta">
+                            6-person team project · Unreal Engine 5, Blueprint · Academic project
+                        </p>
+                        <a href="https://youtu.be/4OJfjtOhcM8" target="_blank"><span class="lang-en">Gameplay
+                                Video</span><span class="lang-ko">게임플레이 영상</span></a>
                         <i>/</i>
-                        <a href="" target="_blank">Download exe</a>                        
+                        <a href="" target="_blank"><span class="lang-en">Download exe</span><span class="lang-ko">실행파일
+                                다운로드</span></a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -188,98 +293,134 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="assets/images/CS250.png" />
+                        <img src="assets/images/flappybird.png" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3><a href="https://github.com/Sunnew-Lee/3D-Graphics-Demo-Project" target="_blank">3D Graphics Demo</a></h3>
+                        <h3><a href="https://github.com/Sunnew-Lee/Wanted3_Project_1" target="_blank">Flappy Bird Clone</a></h3>
                         <p>
-                            Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
-                            Analyzed and implemented code for extracting MIDI file datas to synchronize between the game and music
-                            Documented game design and tech architecture in order to collaborate with designers and engineers to sustain project direction and objectives
+                            A faithful recreation of the classic Flappy Bird, built entirely from scratch in C++ with
+                            no game engine — just a custom console-rendering pipeline driven directly through the
+                            Windows Console API.
+                        </p>
+                        <p class="project-meta">
+                            Solo project · C++, Windows Console API · Wanted PotenUp bootcamp project
                         </p>
                     </div>
                     <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="assets/images/GAM250.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><a href="https://github.com/Sunnew-Lee/BIT-SAVER" target="_blank">BIT SAVER</a></h3>
-                        <p>
-                            Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
-                            Analyzed and implemented code for extracting MIDI file datas to synchronize between the game and music
-                            Documented game design and tech architecture in order to collaborate with designers and engineers to sustain project direction and objectives
-                        </p>
-                        <a href="https://youtu.be/Ajr_ZrKz5es" target="_blank">Gameplay Video</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="assets/images/GAM150.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3><a href="https://github.com/Sunnew-Lee/Treasure-Hunter" target="_blank">Treasure Hunter</a></h3>
-                        <p>
-                            Designed and implemented C++ based simple 2D game engine.
-                            Used the Doodle Library to render and interact with Windows.
-                        </p>
-                        <a href="https://youtu.be/zLi3G0kNb7U" target="_blank">View Trailer</a>
-                        <i>/</i>
-                        <a href="https://drive.google.com/file/d/1VzH0DVGU1847jNTG2tktE7pyX6TTG8QN/view?usp=sharing" target="_blank">Download Installer</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
 
 
-
-                
-
-                <a id="view-more-projects" href="#">View More Projects</a>
+                <a id="view-more-projects" href="#"><span class="lang-en">View More Projects</span><span
+                        class="lang-ko">더 많은 프로젝트 보기</span></a>
                 <div id="more-projects" class="row">
 
                     <div class="project shadow-large">
                         <div class="project-image">
-                            <img src="assets/images/CS230.png" />
+                            <img src="assets/images/GAM250.png" />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
-                            <h3><a href="https://github.com/Sunnew-Lee/Custom-2D-Game-Engine" target="_blank">Custom 2D Game Engine</a></h3>
+                            <h3><a href="https://github.com/Sunnew-Lee/BIT-SAVER" target="_blank">BIT SAVER</a></h3>
                             <p>
-                                Designed and implemented C++ based simple 2D game engine.
-                                Used the Doodle Library to render and interact with Windows.
-                            </p> 
+                                A 2D side-scrolling rhythm action game in the vein of Muse Dash and Rhythm Doctor,
+                                where players battle through stages by timing attacks and movement to MIDI-driven
+                                music tracks.
+                            </p>
+                            <p class="project-meta">
+                                4-person team project · C++, OpenGL (custom engine) · Academic project
+                            </p>
+                            <a href="https://youtu.be/Ajr_ZrKz5es" target="_blank"><span class="lang-en">Gameplay
+                                    Video</span><span class="lang-ko">게임플레이 영상</span></a>
                         </div>
                         <!-- End .project-info -->
                     </div>
-                    <!-- End .project -->               
-    
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="assets/images/GAM150.png" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3><a href="https://github.com/Sunnew-Lee/Treasure-Hunter" target="_blank">Treasure
+                                    Hunter</a></h3>
+                            <p>
+                                A top-down dungeon-crawler adventure game starring treasure hunter cat Minsoo, who
+                                sneaks past enemies to steal from Ruby the millionaire dog king — venturing deeper
+                                for ever-greater treasure.
+                            </p>
+                            <p class="project-meta">
+                                4-person team project · C++, OpenGL · Academic project
+                            </p>
+                            <a href="https://youtu.be/zLi3G0kNb7U" target="_blank"><span class="lang-en">View
+                                    Trailer</span><span class="lang-ko">예고편 보기</span></a>
+                            <i>/</i>
+                            <a href="https://drive.google.com/file/d/1VzH0DVGU1847jNTG2tktE7pyX6TTG8QN/view?usp=sharing"
+                                target="_blank"><span class="lang-en">Download Installer</span><span
+                                    class="lang-ko">설치파일 다운로드</span></a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="assets/images/CS250.png" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3><a href="https://github.com/Sunnew-Lee/3D-Graphics-Demo-Project" target="_blank">3D
+                                    Graphics Demo</a></h3>
+                            <p>
+                                TBD
+                            </p>
+                            <p class="project-meta">
+                                TBD
+                            </p>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <!--
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="assets/images/CS230.png" />
+                        </div>
+                        <div class="project-info">
+                            <h3><a href="https://github.com/Sunnew-Lee/Custom-2D-Game-Engine" target="_blank">Custom 2D
+                                    Game Engine</a></h3>
+                            <p>
+                                Designed and implemented C++ based simple 2D game engine.
+                                Used the Doodle Library to render and interact with Windows.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+
                     <div class="project shadow-large">
                         <div class="project-image">
                             <img src="assets/images/tetris.png" />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
-                            <h3><a href="https://github.com/Sunnew-Lee/Tetris_MasterCopy" target="_blank">Tetris MasterCopy</a></h3>
+                            <h3><a href="https://github.com/Sunnew-Lee/Tetris_MasterCopy" target="_blank">Tetris
+                                    MasterCopy</a></h3>
                             <p>
-                                Master Copy project of the retro 1989 Gameboy Tetris made with p5.js web editor.
-                                Master Copy project of the retro 1989 Gameboy Tetris made with p5.js web editor.
+                                A faithful master-copy recreation of the original 1989 Game Boy Tetris — matching its
+                                menus, scoring, speed curve, and block rotation.
                             </p>
-                            <a href="https://editor.p5js.org/sunwoolee-digipen/full/XI_wLXi7u" target="_blank">Play Now</a>
+                            <p class="project-meta">
+                                2-person team project · p5.js · Academic project
+                            </p>
+                            <a href="https://editor.p5js.org/sunwoolee-digipen/full/XI_wLXi7u" target="_blank"><span
+                                    class="lang-en">Play Now</span><span class="lang-ko">지금 플레이</span></a>
                         </div>
                         <!-- End .project-info -->
                     </div>
                     <!-- End .project -->
-    
+
                     <div class="project shadow-large">
                         <div class="project-image">
                             <img src="assets/images/maya.png" />
@@ -288,31 +429,38 @@
                         <div class="project-info">
                             <h3>3D Animation</h3>
                             <p>
-                                Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
-                                Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
+                                TBD
                             </p>
-                            <a href="https://youtu.be/Wz3F9nJHJfk" target="_blank">View Video</a>
+                            <p class="project-meta">
+                                TBD
+                            </p>
+                            <a href="https://youtu.be/Wz3F9nJHJfk" target="_blank"><span class="lang-en">View
+                                    Video</span><span class="lang-ko">영상 보기</span></a>
                             <i>/</i>
-                            <a href="https://drive.google.com/file/d/1nj2X6SXdQbM4vk3D37J8N7MuOZpHmi01/view?usp=sharing" target="_blank">Download files</a>
+                            <a href="https://drive.google.com/file/d/1nj2X6SXdQbM4vk3D37J8N7MuOZpHmi01/view?usp=sharing"
+                                target="_blank"><span class="lang-en">Download files</span><span class="lang-ko">파일
+                                    다운로드</span></a>
                         </div>
                         <!-- End .project-info -->
                     </div>
                     <!-- End .project -->
-    
+
+                    <!--
                     <div class="project shadow-large">
                         <div class="project-image">
                             <img src="assets/images/glsl.png" />
                         </div>
-                        <!-- End .project-image -->
                         <div class="project-info">
-                            <h3><a href="https://github.com/Sunnew-Lee/GLSL-ShaderExercise" target="_blank">GLSL Shader Exercise</a></h3>
+                            <h3><a href="https://github.com/Sunnew-Lee/GLSL-ShaderExercise" target="_blank">GLSL Shader
+                                    Exercise</a></h3>
                             <p>
                                 Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
                                 Developed custom singleton engine based on C++, OpenGL using Visual Studio 2019
                             </p>
                         </div>
-                        <!-- End .project-info -->
                     </div>
+                    -->
+
                     <!-- End .project -->
 
                     <!-- <div class="project no-image">
@@ -324,49 +472,73 @@
                             <a href="#">View Project</a>
                         </div>
                     </div> -->
-    
+
+                </div>
             </div>
         </div>
     </div>
-</div>
     <!-- End #projects -->
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Work Experience</h2>
+        <h2 class="heading"><span class="lang-en">Experience</span><span class="lang-ko">경력</span></h2>
         <div id="experience-timeline">
 
-            <div data-date="August 2018 – June 2020">
-                <h3>대한민국 공군 - Republic of Korea Air Force, Gyeonggi-do, Republic of Korea</h3>
-                <h4>Military Service</h4>
+            <div data-date="August 2018 – June 2020" data-date-ko="2018 8월 – 2020 6월">
+                <h3><span class="lang-en">Republic of Korea Air Force, Gyeonggi-do, Republic of Korea</span><span
+                        class="lang-ko">대한민국 공군, 경기도</span></h3>
+                <h4><span class="lang-en">Military Service</span><span class="lang-ko">병역</span></h4>
                 <p>
-                    • Served as a vehicle driver and discharged as a sergent
-                </p>
-                <p>
-                    • 수송병과 병장 만기 제대
+                    <span class="lang-en">• Served as a vehicle driver and discharged as a sergeant</span><span
+                        class="lang-ko">• 수송병과 병장 만기 제대</span>
                 </p>
             </div>
 
-            <div data-date="January 2024 – April 2024">
-                <h3>A Round Entertainment, New Jersey, USA</h3>
-                <h4>Software Engineer Intern</h4>
+            <div data-date="January 2024 – April 2024" data-date-ko="2024 1월 – 2024 4월">
+                <h3><span class="lang-en">A Round Entertainment, New Jersey, USA</span><span
+                        class="lang-ko">A Round Entertainment, 뉴저지 주</span></h3>
+                <h3></h3>
+                <h4><span class="lang-en">Software Engineer Intern</span><span class="lang-ko">소프트웨어 엔지니어 인턴</span></h4>
                 <p>
-                    • Participated in the development of a social networking application, ‘Joopi’
+                    <span class="lang-en">• Participated in the development of a social networking application,
+                        ‘Joopi’</span><span class="lang-ko">• 소셜 네트워킹 어플리케이션 Joopi의 개발에 참여</span>
                 </p>
                 <p>
-                    • 소셜 네트위킹 어플리케이션 Joopi의 개발에 참여
+                    <span class="lang-en">• Utilized Android Studio, React Native, and Firebase to build the Android
+                        version of the application</span><span class="lang-ko">• 안드로이드 스튜디오, 리액트 네이티브, 파이어베이스를 활용하여
+                        안드로이드를 타겟으로 어플을 개발</span>
                 </p>
                 <p>
-                    • Utilized Android Studio, React Native, and Firebase to build the Android version of the application
+                    <span class="lang-en">• Managed the team by weekly meetings and reorganizing tasks to enhance
+                        productivity as a team lead</span><span class="lang-ko">• 팀 리드로서 팀의 생산성 향상을 위해 업무 분배와 주간 미팅을
+                        진행함</span>
+                </p>
+            </div>
+
+            <div data-date="July 2025 – January 2026" data-date-ko="2025 7월 – 2026 1월">
+                <h3><span class="lang-en">PotenUp Game Developer Training Program (Cohort 3), Seoul, Republic of
+                        Korea</span><span class="lang-ko">포텐업 게임 개발자 양성과정 3기, 서울</span></h3>
+                <h4><span class="lang-en">K-Digital Training</span><span class="lang-ko">K-디지털 트레이닝</span></h4>
+                <p>
+                    <span class="lang-en">• Learned game development fundamentals, including basic C++ syntax, the A*
+                        algorithm, and Red-Black Tree data structures</span><span class="lang-ko">• 기초 C++ 문법과 A* 알고리즘,
+                        Red-Black Tree 자료구조 등 게임 개발에 필요한 개념을 배움</span>
                 </p>
                 <p>
-                    • 안드로이드 스튜디오, 리액트 네이티브, 파이어베이스를 활용하여 안드로이드를 타겟으로 어플을 개발
+                    <span class="lang-en">• Conducted an in-depth analysis of Unreal Engine 5 and learned how to apply
+                        it effectively</span><span class="lang-ko">• Unreal Engine 5를 심도있게 분석하고 활용법을 익힘</span>
                 </p>
                 <p>
-                    • Managed the team by weekly meetings and reorganizing tasks to enhance productivity as a team lead
+                    <span class="lang-en">• Carried out a team game development project using Unreal Engine 5 and a
+                        dedicated server</span><span class="lang-ko">• Unreal Engine 5과 데디케이티드 서버를 이용한 게임 개발 팀 프로젝트를
+                        진행함</span>
                 </p>
-                <p>
-                    • 팀 리드로서 팀의 생산성 향상을 위해 업무 분배와 주간 미팅을 진행함
-                </p>
+            </div>
+
+            <div data-date="April 2026 – June 2026" data-date-ko="2026 4월 – 2026 6월">
+                <h3><span class="lang-en">JiranData, Gyeonggi-do, Republic of Korea</span><span class="lang-ko">지란지교데이터,
+                        경기도</span></h3>
+                <h4><span class="lang-en">Youth Work Experience Support Program — IT (Security Software) QA
+                        Intern</span><span class="lang-ko">청년 일경험 지원사업 - IT(보안 소프트웨어) QA 인턴</span></h4>
             </div>
 
             <!-- <div data-date="September 2015 – September 2016">
@@ -392,7 +564,7 @@
                 <button type="submit">Send</button>
             </form>
         </div> -->
-        <!-- End #contact-form -->
+    <!-- End #contact-form -->
     <!-- </div> -->
     <!-- End #contact -->
 
@@ -418,16 +590,19 @@
                             <a><i class="fa fa-envelope" aria-hidden="true"><span> : sunwoo9078@gmail.com</span></i></a>
                         </li> -->
                         <li>
-                            <a href="mailto:sunwoo9078@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <a href="mailto:sunwoo9078@gmail.com" target="_blank"><i class="fa fa-envelope"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://github.com/Sunnew-Lee" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/Sunnew-Lee" target="_blank"><i class="fa fa-github"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <!-- <li>
                             <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
                         </li> -->
                         <li>
-                            <a href="https://www.linkedin.com/in/sunwoo-lee-swl/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/sunwoo-lee-swl/" target="_blank"><i
+                                    class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <!-- <li>
                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -447,6 +622,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 
 </html>
